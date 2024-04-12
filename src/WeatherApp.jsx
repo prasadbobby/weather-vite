@@ -16,7 +16,7 @@ const WeatherApp = () => {
             navigator.geolocation.getCurrentPosition(
                 (position) => {
                     const { latitude, longitude } = position.coords;
-                    const apiKey = '3709f89e826c2838310e77a773533f2d'; // Replace with your OpenWeatherMap API key
+                    const apiKey = '3709f89e826c2838310e77a773533f2d'; 
 
                     fetch(
                         `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`
@@ -62,7 +62,6 @@ const WeatherApp = () => {
             '01n': 'https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-weather/ilu2.webp',
             '02d': 'https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-weather/ilu3.webp',
             '02n': 'https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-weather/ilu4.webp',
-            // Add more mappings for other weather icons
         };
 
         return weatherIcons[iconCode] || 'https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-weather/ilu1.webp';
